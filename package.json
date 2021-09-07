@@ -1,0 +1,36 @@
+{
+  "name": "@leonismoe/md5",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "md5 hash function, it will use crypto module for Node.js and pure JS implementation for browser.",
+  "keywords": ["md5"],
+  "homepage": "https://github.com/leonismoe/md5js#readme",
+  "repository": "github:leonismoe/md5js",
+  "contributors": [
+    "Joseph Myers (http://www.myersdaily.org/joseph/)"
+  ],
+  "main": "md5.js",
+  "module": "md5.mjs",
+  "types": "./index.d.ts",
+  "sideEffects": false,
+  "browser": {
+    "./md5.js": "./md5.js",
+    "./md5.mjs": "./md5.mjs"
+  },
+  "exports": {
+    "node": {
+      "import": "./md5-node.mjs",
+      "require": "./md5-node.js"
+    },
+    "browser": {
+      "import": "./md5.mjs",
+      "require": "./md5.cjs",
+      "default": "./md5.js"
+    },
+    "default": "./md5.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
