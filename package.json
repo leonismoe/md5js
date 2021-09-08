@@ -1,6 +1,6 @@
 {
   "name": "@leonismoe/md5",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "description": "md5 hash function, it will use crypto module for Node.js and pure JS implementation for browser.",
   "keywords": ["md5"],
@@ -15,7 +15,8 @@
   "sideEffects": false,
   "browser": {
     "./md5.js": "./md5.js",
-    "./md5.mjs": "./md5.mjs"
+    "./md5.mjs": "./md5.mjs",
+    "./md5.min.js": "./md5.min.js"
   },
   "exports": {
     "node": {
@@ -25,7 +26,7 @@
     "browser": {
       "import": "./md5.mjs",
       "require": "./md5.cjs",
-      "default": "./md5.js"
+      "default": "./md5.min.js"
     },
     "default": "./md5.js"
   },
